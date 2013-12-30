@@ -4,6 +4,8 @@
 #Added by JD
 TestResults/
 packages/
+bin/
+obj/
 
 # User-specific files
 *.suo
