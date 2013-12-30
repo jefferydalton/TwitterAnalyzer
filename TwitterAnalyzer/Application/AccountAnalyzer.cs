@@ -16,7 +16,7 @@ namespace TwitterAnalyzer.Application
 
         public AccountAnalyzer()
         {
-            this.accountQueryCtx = new AccountQueryInMemory();
+            this.accountQueryCtx = new AccountQueryLinqToTwitter();
         }
 
         public AccountAnalyzer(AccountQuery accountQueryCtx)
