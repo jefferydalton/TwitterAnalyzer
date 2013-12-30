@@ -1,0 +1,22 @@
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.Test.dll.config
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.Test.dll
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.Test.pdb
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\LinqToTwitter.dll
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.dll
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.pdb
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\obj\Debug\TwitterAnalyzer.Test.csprojResolveAssemblyReference.cache
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\obj\Debug\TwitterAnalyzer.Test.dll
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\obj\Debug\TwitterAnalyzer.Test.pdb
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\MoreLinq.dll
+C:\Users\ud1815v\Documents\Visual Studio 2013\Projects\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\MoreLinq.xml
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.Test.dll.config
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.Test.dll
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.Test.pdb
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\LinqToTwitter.dll
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.dll
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\MoreLinq.dll
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\TwitterAnalyzer.pdb
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\bin\Debug\MoreLinq.xml
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\obj\Debug\TwitterAnalyzer.Test.csprojResolveAssemblyReference.cache
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\obj\Debug\TwitterAnalyzer.Test.dll
+C:\Projects\Personal\TwitterAnalyzer\TwitterAnalyzer.Test\obj\Debug\TwitterAnalyzer.Test.pdb
