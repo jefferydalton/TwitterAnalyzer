@@ -40,7 +40,7 @@ namespace TwitterAnalyzer.Repository
                            friend.TargetUserID == accountId.ToString()
                      select friend).SingleOrDefault();
 
-                response.IsFollowing = friendships.SourceRelationship.FollowedBy;
+                response.IFollow = friendships.SourceRelationship.FollowedBy;
                 response.IsFollower = friendships.TargetRelationship.FollowedBy;
 
                 return response;
@@ -99,7 +99,7 @@ namespace TwitterAnalyzer.Repository
                         AccountName = user.Identifier.ScreenName,
                         AccountDescription = user.Description,
                         IsFollower = rel.Connections.Contains("followed_by"),
-                        IsFollowing = rel.Connections.Contains("following")
+                        IFollow = rel.Connections.Contains("following")
                      }).ToList();
 
                 response.AddRange(joinedUserData);

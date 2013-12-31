@@ -25,7 +25,7 @@ namespace TwitterAnalyzer.Test.Application
         [TestMethod]
         public void AccountsThatDoNotFollowBack_ReturnsEmptyList()
         {
-            Assert.IsTrue(accountApp.GetFollowingThatAreNotFollowers().Count == 0);
+            Assert.IsTrue(accountApp.GetAccountsThatDoNotFollowMeBack().Count == 0);
         }
     }
 }

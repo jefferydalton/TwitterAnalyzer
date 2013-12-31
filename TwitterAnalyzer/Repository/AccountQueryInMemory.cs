@@ -16,7 +16,7 @@ namespace TwitterAnalyzer.Repository
             return new Account() { AccountId = accountId,
                                    AccountDescription = "Test InMemory Account",
                                    AccountName="TestInMemory",
-                                   IsFollowing = false,
+                                   IFollow = false,
                                    IsFollower = true};
         }
 
@@ -27,7 +27,7 @@ namespace TwitterAnalyzer.Repository
             {
                 AccountId = 2,
                 IsFollower = false,
-                IsFollowing = true,
+                IFollow = true,
                 AccountName = "TestInMemory2",
                 AccountDescription = "Test InMemory Account"
             });
@@ -42,7 +42,7 @@ namespace TwitterAnalyzer.Repository
             {
                 AccountId = 3,
                 IsFollower = true,
-                IsFollowing = false,
+                IFollow = false,
                 AccountName = "TestInMemory3",
                 AccountDescription = "Test InMemory Account"
             });

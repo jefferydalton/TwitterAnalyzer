@@ -21,14 +21,14 @@ namespace TwitterAnalyzer.Test.Repository
         public void GetAccount_MutualFollowing()
         {
             var account = queryRepository.GetAccount(683213);
-            Assert.IsTrue(account.IsFollower == true && account.IsFollowing == true);
+            Assert.IsTrue(account.IsFollower == true && account.IFollow == true);
         }
 
         [TestMethod]
         public void GetAccount_OnlyIFollow()
         {
             var account = queryRepository.GetAccount(18153336);
-            Assert.IsTrue(account.IsFollower == true && account.IsFollowing == true);
+            Assert.IsTrue(account.IsFollower == true && account.IFollow == true);
         }
 
         [TestMethod]

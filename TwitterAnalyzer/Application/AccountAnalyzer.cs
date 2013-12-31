@@ -29,17 +29,17 @@ namespace TwitterAnalyzer.Application
             return accountQueryCtx;
         }
 
-        public ReadOnlyCollection<Account> GetFollowingThatAreNotFollowers()
+        public ReadOnlyCollection<Account> GetAccountsThatDoNotFollowMeBack()
         {
             return new ReadOnlyCollection<Account>(accountQueryCtx.GetFollowing()
                                                     .Where(c => c.IsFollower == false)
                                                     .Select(c => c).ToList());
         }
 
-        public ReadOnlyCollection<Account> GetFollowersThatAreNotFollowing()
+        public ReadOnlyCollection<Account> GetAccountsIDoNotFollowBack()
         {
             return new ReadOnlyCollection<Account>(accountQueryCtx.GetFollowers()
-                                                    .Where(c => c.IsFollowing == false)
+                                                    .Where(c => c.IFollow == false)
                                                     .Select(c => c).ToList());
         }
     }

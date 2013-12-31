@@ -24,7 +24,7 @@ namespace TwitterAnalyzer.Test.Repository
         [TestMethod]
         public void GetSubscriptions_AllRecsIsSubscriptionEqTrue()
         {
-            Assert.IsTrue(queryRepository.GetFollowers().Where(x => x.IsFollowing == false).Count() == 0);
+            Assert.IsTrue(queryRepository.GetFollowers().Where(x => x.IFollow == false).Count() == 0);
         }
 
         [TestMethod]

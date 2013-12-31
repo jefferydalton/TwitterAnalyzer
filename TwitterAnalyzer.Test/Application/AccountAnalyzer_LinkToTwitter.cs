@@ -25,10 +25,10 @@ namespace TwitterAnalyzer.Test.Application
         [TestMethod]
         public void AccountsThatDoNotFollowBack_ReturnsEmptyList()
         {
-            var response = accountApp.GetFollowingThatAreNotFollowers();
+            var response = accountApp.GetAccountsThatDoNotFollowMeBack();
 
             Assert.AreNotSame(0, response.Count);
-            Assert.IsTrue(response[0].IsFollowing == true && response[0].IsFollower == false);
+            Assert.IsTrue(response[0].IFollow == true && response[0].IsFollower == false);
         }
     }
 }

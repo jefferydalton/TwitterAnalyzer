@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TwitterAnalyzer.Domain.Account>
+
+@{
+    ViewBag.Title = "DoesNotFollowBack";
+}
+
+<h2>DoesNotFollowBack</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFollower)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IFollow)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsFollower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IFollow)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountDescription)
+        </td>
+    </tr>
+}
+
+</table>
