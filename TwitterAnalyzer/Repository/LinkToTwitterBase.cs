@@ -8,7 +8,7 @@ using System.Configuration;
 
 namespace TwitterAnalyzer.Repository
 {
-    public class LinkToTwitterBase     {
+    public abstract class LinkToTwitterBase     {
 
         internal const string MyTwitterId = "14473601";
         internal const string MyTwitterName = "jefferydalton";

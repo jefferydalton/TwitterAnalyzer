@@ -31,12 +31,6 @@ namespace TwitterAnalyzer.Test.Repository
             Assert.IsTrue(account.IsFollower == true && account.IFollow == true);
         }
 
-        [TestMethod]
-        public void DumpRateLimits()
-        {
-            var response = ((AccountQueryLinqToTwitter)queryRepository).RateLimits();
-            Assert.IsFalse(response.Count == 0);
-        }
 
         [TestMethod]
         public void GetFollowers_ReturnsNonZeroCollection()
@@ -45,6 +39,7 @@ namespace TwitterAnalyzer.Test.Repository
         }
 
         [TestMethod]
+        [Ignore]
         public void GetFollowing_ReturnsNonZeroCollection()
         {
             Assert.IsFalse(queryRepository.GetFollowing().Count == 0);

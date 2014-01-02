@@ -62,11 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\AccountAnalyzer.cs" />
+    <Compile Include="Application\APIUtility.cs" />
     <Compile Include="Domain\Account.cs" />
+    <Compile Include="Domain\APIRateLimit.cs" />
     <Compile Include="Interfaces\AccountQuery.cs" />
+    <Compile Include="Interfaces\APIQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AccountQueryLinqToTwitter.cs" />
     <Compile Include="Repository\AccountQueryInMemory.cs" />
+    <Compile Include="Repository\APIQueryInMemorycs.cs" />
+    <Compile Include="Repository\APIQueryLinkToTwitter.cs" />
     <Compile Include="Repository\LinkToTwitterBase.cs" />
   </ItemGroup>
   <ItemGroup>
