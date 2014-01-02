@@ -11,21 +11,9 @@ namespace TwitterAnalyzer.Application
 {
     public class APIUtility
     {
-        private APIQuery apiQueryProvider;
-
-        public APIUtility(APIQuery queryProvider)
+        public List<APIRateLimit> GetRateLimits(RepositoryInformation provider)
         {
-            apiQueryProvider = queryProvider;
-        }
-
-        public APIUtility()
-        {
-            apiQueryProvider = new APIQueryLinkToTwitter();
-        }
-
-        public List<APIRateLimit> GetRateLimits()
-        {
-            return apiQueryProvider.GetAPIRateLimits();
+            return provider.GetRateLimits();
         }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="Application\AccountAnalyzer_LinkToTwitter.cs" />
     <Compile Include="Application\AccountAnalyzer_InMemory.cs" />
     <Compile Include="Application\APIUtility_LinkToTwitter.cs" />
+    <Compile Include="Application\APIUtility_InMemory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AccountQuery_InMemory.cs" />
     <Compile Include="Repository\AccountQuery_LinqToTwitter.cs" />

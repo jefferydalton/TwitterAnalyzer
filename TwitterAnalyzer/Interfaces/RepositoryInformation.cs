@@ -7,8 +7,8 @@ using TwitterAnalyzer.Domain;
 
 namespace TwitterAnalyzer.Interfaces
 {
-    public interface APIQuery
+    public interface RepositoryInformation
     {
-        List<APIRateLimit> GetAPIRateLimits();
+        List<APIRateLimit> GetRateLimits();
     }
 }

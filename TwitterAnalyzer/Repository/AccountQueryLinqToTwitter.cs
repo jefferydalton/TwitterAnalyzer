@@ -7,10 +7,12 @@ using TwitterAnalyzer.Interfaces;
 using LinqToTwitter;
 using System.Collections.ObjectModel;
 using MoreLinq;
+using TwitterAnalyzer.Utility;
+using TwitterAnalyzer.Domain;
 
 namespace TwitterAnalyzer.Repository
 {
-    public class AccountQueryLinqToTwitter : LinkToTwitterBase, AccountQuery
+    public class AccountQueryLinqToTwitter : LinkToTwitterBase, AccountQuery, RepositoryInformation
     {
 
         public AccountQueryLinqToTwitter(): base()
@@ -40,8 +42,8 @@ namespace TwitterAnalyzer.Repository
                            friend.TargetUserID == accountId.ToString()
                      select friend).SingleOrDefault();
 
-                response.IFollow = friendships.SourceRelationship.FollowedBy;
-                response.IsFollower = friendships.TargetRelationship.FollowedBy;
+                response.IsFollower = friendships.SourceRelationship.FollowedBy;
+                response.IFollow = friendships.TargetRelationship.FollowedBy;
 
                 return response;
             }
@@ -130,8 +132,19 @@ namespace TwitterAnalyzer.Repository
         }
 
 
+        public List<Domain.APIRateLimit> GetRateLimits()
+        {
+            string[] apiList = new string [] {"/users/lookup", "/friends/ids", "/followers/ids", "/friendships/lookup"}; 
 
-
-    
+            return this.RateLimits()
+                        .Where(x => apiList.Contains(x.Resource))
+                        .Select(x => new APIRateLimit()
+                        {
+                            Limit = x.Limit,
+                            NextReset = x.Reset.ToDateTimeFromUnixTime(),
+                            RemainingCalls = x.Remaining,
+                            Resource = x.Resource
+                        }).ToList();
+        }
     }
 }

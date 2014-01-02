@@ -27,8 +27,8 @@ namespace TwitterAnalyzer.Test.Repository
         [TestMethod]
         public void GetAccount_OnlyIFollow()
         {
-            var account = queryRepository.GetAccount(18153336);
-            Assert.IsTrue(account.IsFollower == true && account.IFollow == true);
+            var account = queryRepository.GetAccount(9505092);
+            Assert.IsTrue(account.IsFollower == false && account.IFollow == true);
         }
 
 

@@ -9,7 +9,7 @@ using TwitterAnalyzer.Interfaces;
 
 namespace TwitterAnalyzer.Repository
 {
-    public class AccountQueryInMemory : AccountQuery
+    public class AccountQueryInMemory : AccountQuery, RepositoryInformation
     {
         public Domain.Account GetAccount(ulong accountId)
         {
@@ -48,6 +48,11 @@ namespace TwitterAnalyzer.Repository
             });
 
             return new ReadOnlyCollection<Account>(accountsThatIFollow);
+        }
+
+        public List<APIRateLimit> GetRateLimits()
+        {
+            return new List<APIRateLimit>() { new APIRateLimit() { Resource = "null", Limit = int.MaxValue, NextReset = DateTime.MinValue, RemainingCalls = int.MaxValue } };
         }
     }
 }
