@@ -54,10 +54,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\AccountAnalyzer_LinkToTwitter.cs" />
-    <Compile Include="Application\AccountAnalyzer_InMemory.cs" />
-    <Compile Include="Application\APIUtility_LinkToTwitter.cs" />
-    <Compile Include="Application\APIUtility_InMemory.cs" />
+    <Compile Include="Application\Accounts_LinkToTwitterRespository.cs" />
+    <Compile Include="Application\Accounts_InMemoryRepository.cs" />
+    <Compile Include="Application\APIUtility_LinkToTwitterRepository.cs" />
+    <Compile Include="Application\APIUtility_InMemoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AccountQuery_InMemory.cs" />
     <Compile Include="Repository\AccountQuery_LinqToTwitter.cs" />

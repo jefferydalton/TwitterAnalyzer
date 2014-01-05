@@ -10,7 +10,7 @@ using TwitterAnalyzer.Interfaces;
 namespace TwitterAnalyzer.Test.Application
 {
     [TestClass]
-    public class APIUtility_LinkToTwitter
+    public class APIUtility_LinkToTwitterRepository
     {
         RepositoryInformation repositoryCtx = new AccountQueryLinqToTwitter();
 

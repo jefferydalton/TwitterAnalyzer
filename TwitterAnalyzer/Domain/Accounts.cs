@@ -10,35 +10,35 @@ using TwitterAnalyzer.Repository;
 
 namespace TwitterAnalyzer.Application
 {
-    public class AccountAnalyzer
+    public class Accounts
     {
-        private AccountQuery accountQueryCtx;
+        private AccountQuery accountQueryRepository;
 
-        public AccountAnalyzer()
+        public Accounts()
         {
-            this.accountQueryCtx = new AccountQueryLinqToTwitter();
+            this.accountQueryRepository = new AccountQueryLinqToTwitter();
         }
 
-        public AccountAnalyzer(AccountQuery accountQueryCtx)
+        public Accounts(AccountQuery accountQueryRepository)
         {
-            this.accountQueryCtx = accountQueryCtx;
+            this.accountQueryRepository = accountQueryRepository;
         }
 
         public AccountQuery AccountQueryRepository()
         {
-            return accountQueryCtx;
+            return accountQueryRepository;
         }
 
         public ReadOnlyCollection<Account> GetAccountsThatDoNotFollowMeBack()
         {
-            return new ReadOnlyCollection<Account>(accountQueryCtx.GetFollowing()
+            return new ReadOnlyCollection<Account>(accountQueryRepository.GetFollowing()
                                                     .Where(c => c.IsFollower == false)
                                                     .Select(c => c).ToList());
         }
 
         public ReadOnlyCollection<Account> GetAccountsIDoNotFollowBack()
         {
-            return new ReadOnlyCollection<Account>(accountQueryCtx.GetFollowers()
+            return new ReadOnlyCollection<Account>(accountQueryRepository.GetFollowers()
                                                     .Where(c => c.IFollow == false)
                                                     .Select(c => c).ToList());
         }

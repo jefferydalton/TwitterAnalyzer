@@ -10,17 +10,10 @@ using TwitterAnalyzer.Application;
 namespace TwitterAnalyzer.Test.Application
 {
     [TestClass]
-    public class AccountAnalyzer_InMemory
+    public class Accounts_InMemoryRepository
     {
 
-        private AccountAnalyzer accountApp = new AccountAnalyzer(new AccountQueryInMemory());
-
-        [TestMethod]
-        public void AccountAnalyzer_IsInstantiated()
-        {
-            Assert.IsInstanceOfType(accountApp, typeof(AccountAnalyzer));
-            Assert.IsInstanceOfType(accountApp.AccountQueryRepository(), typeof(AccountQueryInMemory));
-        }
+        private Accounts accountApp = new Accounts(new AccountQueryInMemory());
 
         [TestMethod]
         public void AccountsThatDoNotFollowBack_ReturnsEmptyList()

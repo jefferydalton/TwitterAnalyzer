@@ -10,20 +10,14 @@ using TwitterAnalyzer.Application;
 namespace TwitterAnalyzer.Test.Application
 {
     [TestClass]
-    public class AccountAnalyzer_LinkToTwitter
+    public class Accounts_LinkToTwitterRepository
     {
 
-        private AccountAnalyzer accountApp = new AccountAnalyzer(new AccountQueryLinqToTwitter());
+        private Accounts accountApp = new Accounts(new AccountQueryLinqToTwitter());
+
 
         [TestMethod]
-        public void AccountAnalyzer_IsInstantiated()
-        {
-            Assert.IsInstanceOfType(accountApp, typeof(AccountAnalyzer));
-            Assert.IsInstanceOfType(accountApp.AccountQueryRepository(), typeof(AccountQueryLinqToTwitter));
-        }
-
-        [TestMethod]
-        public void AccountsThatDoNotFollowBack_ReturnsEmptyList()
+        public void AccountsThatDoNotFollowBack_ContainsItemsAndFollowRulesOk()
         {
             var response = accountApp.GetAccountsThatDoNotFollowMeBack();
 

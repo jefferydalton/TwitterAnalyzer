@@ -8,6 +8,8 @@ namespace TwitterAnalyzer.Domain
 {
     public class Account
     {
+        internal Account()
+        { }
 
         public ulong AccountId { get; internal set; }
         public string AccountName { get; internal set; }

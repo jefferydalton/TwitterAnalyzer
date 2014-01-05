@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\AccountAnalyzer.cs" />
+    <Compile Include="Domain\Accounts.cs" />
     <Compile Include="Application\APIUtility.cs" />
     <Compile Include="Domain\Account.cs" />
     <Compile Include="Domain\APIRateLimit.cs" />

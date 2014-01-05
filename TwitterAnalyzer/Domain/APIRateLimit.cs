@@ -8,6 +8,9 @@ namespace TwitterAnalyzer.Domain
 {
     public class APIRateLimit
     {
+        internal APIRateLimit()
+        { }
+
         public string Resource { get; internal set; }
         public int RemainingCalls { get; internal set; }
         public int Limit { get; internal set; }

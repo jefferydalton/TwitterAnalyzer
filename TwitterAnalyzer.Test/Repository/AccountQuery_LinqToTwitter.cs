@@ -39,7 +39,6 @@ namespace TwitterAnalyzer.Test.Repository
         }
 
         [TestMethod]
-        [Ignore]
         public void GetFollowing_ReturnsNonZeroCollection()
         {
             Assert.IsFalse(queryRepository.GetFollowing().Count == 0);

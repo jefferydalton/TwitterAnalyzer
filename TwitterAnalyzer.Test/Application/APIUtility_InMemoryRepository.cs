@@ -10,7 +10,7 @@ using TwitterAnalyzer.Interfaces;
 namespace TwitterAnalyzer.Test.Application
 {
     [TestClass]
-    public class APIUtility_InMemory
+    public class APIUtility_InMemoryRepository
     {
         RepositoryInformation repositoryCtx = new AccountQueryInMemory();
 
