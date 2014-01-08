@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwitterAnalyzer.Utility
+namespace TwitterAnalyzer.Infrastructure
 {
     public static class EpochTimeConversion
     {

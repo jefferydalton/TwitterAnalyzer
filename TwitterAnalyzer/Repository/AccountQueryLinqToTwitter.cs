@@ -7,14 +7,13 @@ using TwitterAnalyzer.Interfaces;
 using LinqToTwitter;
 using System.Collections.ObjectModel;
 using MoreLinq;
-using TwitterAnalyzer.Utility;
+using TwitterAnalyzer.Infrastructure;
 using TwitterAnalyzer.Domain;
 
 namespace TwitterAnalyzer.Repository
 {
     public class AccountQueryLinqToTwitter : LinkToTwitterBase, AccountQuery, RepositoryInformation
     {
-
         public AccountQueryLinqToTwitter(): base()
         {
         }
@@ -23,29 +22,8 @@ namespace TwitterAnalyzer.Repository
         {
             using (var twitterCtx = new TwitterContext(this.GetAuthKey()))
             {
-
-                var response =
-                    (from user in twitterCtx.User
-                     where user.Type == UserType.Show &&
-                           user.UserID == accountId.ToString()
-                     select new Domain.Account()
-                     {
-                         AccountId = ulong.Parse(user.UserID),
-                         AccountDescription = user.Description,
-                         AccountName = user.Name
-                     }).SingleOrDefault();
-                    
-                var friendships =
-                    (from friend in twitterCtx.Friendship
-                     where friend.Type == FriendshipType.Show &&
-                           friend.SourceUserID == MyTwitterId &&
-                           friend.TargetUserID == accountId.ToString()
-                     select friend).SingleOrDefault();
-
-                response.IsFollower = friendships.SourceRelationship.FollowedBy;
-                response.IFollow = friendships.TargetRelationship.FollowedBy;
-
-                return response;
+                var accountIdList = new List<string>() { accountId.ToString() };
+                return GetUsers(twitterCtx, accountIdList).FirstOrDefault();
             }
         }
 
