@@ -7,18 +7,18 @@ using TwitterAnalyzer.Interfaces;
 using LinqToTwitter;
 using System.Collections.ObjectModel;
 using MoreLinq;
-using TwitterAnalyzer.Infrastructure;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Extensions;
+using TwitterAnalyzer.Application;
 
 namespace TwitterAnalyzer.Repository
 {
-    public class AccountQueryLinqToTwitter : LinkToTwitterBase, AccountQuery, RepositoryInformation
+    public class AccountQueryRepositoryLinqToTwitter : LinkToTwitterBase, AccountQueryRepository, RepositoryInformation
     {
-        public AccountQueryLinqToTwitter(): base()
+        public AccountQueryRepositoryLinqToTwitter(): base()
         {
         }
 
-        public Domain.Account GetAccount(ulong accountId)
+        public Application.Account GetAccount(ulong accountId)
         {
             using (var twitterCtx = new TwitterContext(this.GetAuthKey()))
             {
@@ -27,32 +27,32 @@ namespace TwitterAnalyzer.Repository
             }
         }
 
-        public ReadOnlyCollection<Domain.Account> GetFollowers()
+        public ReadOnlyCollection<Application.Account> GetFollowers()
         {
             return GetAccounts(SocialGraphType.Followers);
         }
 
-        public ReadOnlyCollection<Domain.Account> GetFollowing()
+        public ReadOnlyCollection<Application.Account> GetFollowing()
         {
             return GetAccounts(SocialGraphType.Friends);
         }
 
-        private ReadOnlyCollection<Domain.Account> GetAccounts(SocialGraphType accountType)
+        private ReadOnlyCollection<Application.Account> GetAccounts(SocialGraphType accountType)
         {
-            ReadOnlyCollection<Domain.Account> response;
+            ReadOnlyCollection<Application.Account> response;
             using (var twitterCtx = new TwitterContext(this.GetAuthKey()))
             {
                 var Ids = GetIDs(twitterCtx, accountType, "-1");
-                response = new ReadOnlyCollection<Domain.Account>(GetUsers(twitterCtx, Ids));
+                response = new ReadOnlyCollection<Application.Account>(GetUsers(twitterCtx, Ids));
             }
 
             return response;
         }
 
 
-        private List<Domain.Account> GetUsers(TwitterContext twitterctx, List<string> Ids)
+        private List<Application.Account> GetUsers(TwitterContext twitterctx, List<string> Ids)
         {
-            List<Domain.Account> response = new List<Domain.Account>();
+            List<Application.Account> response = new List<Application.Account>();
 
             foreach (var batch in Ids.Batch(100))
             {
@@ -74,7 +74,7 @@ namespace TwitterAnalyzer.Repository
                     (from user in users
                      join rel in relationships
                      on user.Identifier.ID equals rel.ID
-                     select new Domain.Account() {
+                     select new Application.Account() {
                         AccountId = ulong.Parse(user.Identifier.ID),
                         AccountName = user.Identifier.ScreenName,
                         AccountDescription = user.Description,
@@ -110,7 +110,7 @@ namespace TwitterAnalyzer.Repository
         }
 
 
-        public List<Domain.APIRateLimit> GetRateLimits()
+        public List<Application.APIRateLimit> GetRateLimits()
         {
             string[] apiList = new string [] {"/users/lookup", "/friends/ids", "/followers/ids", "/friendships/lookup"}; 
 

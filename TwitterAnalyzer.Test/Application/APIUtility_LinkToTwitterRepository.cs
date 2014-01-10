@@ -12,7 +12,7 @@ namespace TwitterAnalyzer.Test.Application
     [TestClass]
     public class APIUtility_LinkToTwitterRepository
     {
-        RepositoryInformation repositoryCtx = new AccountQueryLinqToTwitter();
+        RepositoryInformation repositoryCtx = new AccountQueryRepositoryLinqToTwitter();
 
         
         [TestMethod]

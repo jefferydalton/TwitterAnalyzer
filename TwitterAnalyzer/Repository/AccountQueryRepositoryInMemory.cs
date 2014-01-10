@@ -4,14 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Application;
 using TwitterAnalyzer.Interfaces;
 
 namespace TwitterAnalyzer.Repository
 {
-    public class AccountQueryInMemory : AccountQuery, RepositoryInformation
+    public class AccountQueryRepositoryInMemory : AccountQueryRepository, RepositoryInformation
     {
-        public Domain.Account GetAccount(ulong accountId)
+        public Application.Account GetAccount(ulong accountId)
         {
             return new Account() { AccountId = accountId,
                                    AccountDescription = "Test InMemory Account",
@@ -20,9 +20,9 @@ namespace TwitterAnalyzer.Repository
                                    IsFollower = true};
         }
 
-        public ReadOnlyCollection<Domain.Account> GetFollowers()
+        public ReadOnlyCollection<Application.Account> GetFollowers()
         {
-            List<Domain.Account> accountsThatIFollow = new List<Domain.Account>();
+            List<Application.Account> accountsThatIFollow = new List<Application.Account>();
             accountsThatIFollow.Add(new Account()
             {
                 AccountId = 2,
@@ -35,9 +35,9 @@ namespace TwitterAnalyzer.Repository
             return new ReadOnlyCollection<Account>(accountsThatIFollow);
         }
 
-        public ReadOnlyCollection<Domain.Account> GetFollowing()
+        public ReadOnlyCollection<Application.Account> GetFollowing()
         {
-            List<Domain.Account> accountsThatIFollow = new List<Domain.Account>();
+            List<Application.Account> accountsThatIFollow = new List<Application.Account>();
             accountsThatIFollow.Add(new Account()
             {
                 AccountId = 3,

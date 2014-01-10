@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Application;
 using TwitterAnalyzer.Interfaces;
 using TwitterAnalyzer.Repository;
 

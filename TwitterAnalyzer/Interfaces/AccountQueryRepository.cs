@@ -4,14 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Application;
 
 namespace TwitterAnalyzer.Interfaces
 {
-    public interface AccountQuery
+    public interface AccountQueryRepository
     {
         Account GetAccount(ulong accountId);
-        ReadOnlyCollection<Domain.Account> GetFollowers();
-        ReadOnlyCollection<Domain.Account> GetFollowing();
+        ReadOnlyCollection<Application.Account> GetFollowers();
+        ReadOnlyCollection<Application.Account> GetFollowing();
     }
 }

@@ -9,9 +9,9 @@ using System.Linq;
 namespace TwitterAnalyzer.Test.Repository
 {
     [TestClass]
-    public class AccountQuery_InMemory
+    public class AccountQueryRepository_InMemory
     {
-        AccountQuery queryRepository = new AccountQueryInMemory();
+        AccountQueryRepository queryRepository = new AccountQueryRepositoryInMemory();
         ulong testAccountId = 1;
 
 

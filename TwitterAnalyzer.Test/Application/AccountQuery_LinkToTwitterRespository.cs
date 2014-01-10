@@ -13,7 +13,7 @@ namespace TwitterAnalyzer.Test.Application
     public class Accounts_LinkToTwitterRepository
     {
 
-        private Accounts accountApp = new Accounts(new AccountQueryLinqToTwitter());
+        private AccountQuery accountApp = new AccountQuery(new AccountQueryRepositoryLinqToTwitter());
 
 
         [TestMethod]

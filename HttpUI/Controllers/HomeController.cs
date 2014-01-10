@@ -16,7 +16,7 @@ namespace HttpUI.Controllers
 
         public ActionResult DoesNotFollowBack()
         {
-            var acctAnalyzer = new Accounts();
+            var acctAnalyzer = new AccountQuery();
             var acctList = acctAnalyzer.GetAccountsThatDoNotFollowMeBack();            
             return View(acctList);
         }

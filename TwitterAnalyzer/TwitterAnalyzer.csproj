@@ -62,26 +62,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Accounts.cs" />
+    <Compile Include="Application\AccountQuery.cs" />
     <Compile Include="Application\APIUtility.cs" />
     <Compile Include="Domain\Account.cs" />
     <Compile Include="Domain\APIRateLimit.cs" />
-    <Compile Include="Interfaces\AccountQuery.cs" />
+    <Compile Include="Interfaces\AccountQueryRepository.cs" />
     <Compile Include="Interfaces\RepositoryInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\AccountQueryLinqToTwitter.cs" />
-    <Compile Include="Repository\AccountQueryInMemory.cs" />
+    <Compile Include="Repository\AccountQueryRepositoryLinqToTwitter.cs" />
+    <Compile Include="Repository\AccountQueryRepositoryInMemory.cs" />
     <Compile Include="Repository\LinkToTwitterBase.cs" />
-    <Compile Include="Utility\EpochTimeConversion.cs" />
+    <Compile Include="Extensions\EpochTimeConversion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Infrastructure\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

@@ -4,27 +4,27 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Application;
 using TwitterAnalyzer.Interfaces;
 using TwitterAnalyzer.Repository;
 
 namespace TwitterAnalyzer.Application
 {
-    public class Accounts
+    public class AccountQuery
     {
-        private AccountQuery accountQueryRepository;
+        private AccountQueryRepository accountQueryRepository;
 
-        public Accounts()
+        public AccountQuery()
         {
-            this.accountQueryRepository = new AccountQueryLinqToTwitter();
+            this.accountQueryRepository = new AccountQueryRepositoryLinqToTwitter();
         }
 
-        public Accounts(AccountQuery accountQueryRepository)
+        public AccountQuery(AccountQueryRepository accountQueryRepository)
         {
             this.accountQueryRepository = accountQueryRepository;
         }
 
-        public AccountQuery AccountQueryRepository()
+        public AccountQueryRepository AccountQueryRepository()
         {
             return accountQueryRepository;
         }

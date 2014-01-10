@@ -6,9 +6,9 @@ using TwitterAnalyzer.Repository;
 namespace TwitterAnalyzer.Test.Repository
 {
     [TestClass]
-    public class AccountQuery_LinqToTwitter
+    public class AccountQueryRepository_LinqToTwitter
     {
-        AccountQuery queryRepository = new AccountQueryLinqToTwitter();
+        AccountQueryRepository queryRepository = new AccountQueryRepositoryLinqToTwitter();
         ulong testAccountId = 18153336;
 
         [TestMethod]
