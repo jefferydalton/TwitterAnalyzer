@@ -4,11 +4,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwitterAnalyzer.Application;
+using TwitterAnalyzer.Domain;
 using TwitterAnalyzer.Interfaces;
 using TwitterAnalyzer.Repository;
 
-namespace TwitterAnalyzer.Application
+namespace TwitterAnalyzer.Domain
 {
     public class AccountQuery
     {

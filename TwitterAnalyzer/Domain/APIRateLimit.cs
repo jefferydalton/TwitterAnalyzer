@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwitterAnalyzer.Application
+namespace TwitterAnalyzer.Domain
 {
     public class APIRateLimit
     {
