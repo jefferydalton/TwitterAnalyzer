@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TwitterAnalyzer.Domain.APIRateLimit>
+
+@{
+    ViewBag.Title = "RateLimits";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>API Rate Limits</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Resource)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RemainingCalls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Limit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NextReset)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RemainingCalls)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Limit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NextReset)
+        </td>
+    </tr>
+}
+
+</table>
