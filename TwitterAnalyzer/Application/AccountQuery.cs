@@ -29,6 +29,11 @@ namespace TwitterAnalyzer.Domain
             return accountQueryRepository;
         }
 
+        public RepositoryInformation RepositoryInformation()
+        {
+            return (RepositoryInformation)accountQueryRepository;
+        }
+
         public ReadOnlyCollection<Account> GetAccountsThatDoNotFollowMeBack()
         {
             return new ReadOnlyCollection<Account>(accountQueryRepository.GetFollowing()

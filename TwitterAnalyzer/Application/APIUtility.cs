@@ -11,7 +11,7 @@ namespace TwitterAnalyzer.Domain
 {
     public class APIUtility
     {
-        public List<APIRateLimit> GetRateLimits(RepositoryInformation provider)
+        public static List<APIRateLimit> GetRateLimits(RepositoryInformation provider)
         {
             return provider.GetRateLimits();
         }
