@@ -16,6 +16,7 @@ namespace TwitterAnalyzer.Domain
         public bool IsFollower { get; internal set; }
         public bool IFollow { get; internal set; }
         public string AccountDescription { get; internal set; }
+        public Uri ProfileImage { get; internal set; }
 
     }
 }

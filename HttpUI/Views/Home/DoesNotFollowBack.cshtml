@@ -5,22 +5,26 @@
 }
 
 <h2>DoesNotFollowBack</h2>
+<p>Total @Model.Count() </p>
 
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.AccountName)
         </th>
+        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.AccountDescription)
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.AccountName)
+        </td>
+        <td>
+            <img src="@Url.Content(item.ProfileImage.ToString())" alt="Image" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AccountDescription)

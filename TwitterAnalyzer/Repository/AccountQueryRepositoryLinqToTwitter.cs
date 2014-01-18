@@ -128,7 +128,8 @@ namespace TwitterAnalyzer.Repository
                          AccountName = user.Identifier.ScreenName,
                          AccountDescription = user.Description,
                          IsFollower = rel.Connections.Contains("followed_by"),
-                         IFollow = rel.Connections.Contains("following")
+                         IFollow = rel.Connections.Contains("following"),
+                         ProfileImage = new Uri(user.ProfileImageUrl ?? "http://127.0.0.1")
                      }).ToList();
 
                 response.AddRange(joinedUserData);
