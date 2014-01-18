@@ -62,16 +62,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\AccountQuery.cs" />
-    <Compile Include="Application\APIUtility.cs" />
-    <Compile Include="Domain\Account.cs" />
-    <Compile Include="Domain\APIRateLimit.cs" />
-    <Compile Include="Interfaces\AccountQueryRepository.cs" />
-    <Compile Include="Interfaces\RepositoryInformation.cs" />
+    <Compile Include="Application\AccountQueryService.cs" />
+    <Compile Include="Application\APIQueryService.cs" />
+    <Compile Include="Domain\Model\Account.cs" />
+    <Compile Include="Domain\Model\APIRateLimit.cs" />
+    <Compile Include="Domain\AccountQueryRepository.cs" />
+    <Compile Include="Domain\APIRateLimitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\AccountQueryRepositoryLinqToTwitter.cs" />
-    <Compile Include="Repository\AccountQueryRepositoryInMemory.cs" />
-    <Compile Include="Repository\LinkToTwitterBase.cs" />
+    <Compile Include="Infrastructure\AccountQueryRepositoryLinqToTwitter.cs" />
+    <Compile Include="Infrastructure\AccountQueryRepositoryInMemory.cs" />
+    <Compile Include="Infrastructure\LinkToTwitterBase.cs" />
     <Compile Include="Extensions\EpochTimeConversion.cs" />
   </ItemGroup>
   <ItemGroup>

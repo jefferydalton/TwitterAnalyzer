@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Application;
+using TwitterAnalyzer.Domain.Model;
 
-namespace TwitterAnalyzer.Interfaces
+namespace TwitterAnalyzer.Domain
 {
-    public interface RepositoryInformation
+    public interface APIRateLimitRepository
     {
         List<APIRateLimit> GetRateLimits();
     }

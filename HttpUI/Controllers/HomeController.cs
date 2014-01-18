@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TwitterAnalyzer.Application;
+using TwitterAnalyzer.Application;
 using TwitterAnalyzer.Domain;
-using TwitterAnalyzer.Interfaces;
 
 namespace HttpUI.Controllers
 {
@@ -17,15 +18,15 @@ namespace HttpUI.Controllers
 
         public ActionResult DoesNotFollowBack()
         {
-            var acctAnalyzer = new AccountQuery();
+            var acctAnalyzer = new AccountQueryService();
             var acctList = acctAnalyzer.GetAccountsThatDoNotFollowMeBack();            
             return View(acctList);
         }
 
         public ActionResult RateLimits()
         {
-            var acctAnalyzer = new AccountQuery();
-            var rateLimts = APIUtility.GetRateLimits(acctAnalyzer.RepositoryInformation());
+            var acctAnalyzer = new AccountQueryService();
+            var rateLimts = APIQueryService.GetRateLimits(acctAnalyzer.RepositoryInformation());
             return View(rateLimts);
         }
 

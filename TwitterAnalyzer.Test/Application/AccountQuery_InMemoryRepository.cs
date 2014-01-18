@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TwitterAnalyzer.Repository;
-using TwitterAnalyzer.Interfaces;
+using TwitterAnalyzer.Infrastructure;
+using TwitterAnalyzer.Domain;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Application;
 
 namespace TwitterAnalyzer.Test.Application
 {
@@ -13,7 +13,7 @@ namespace TwitterAnalyzer.Test.Application
     public class AccountQuery_InMemoryRepository
     {
 
-        private AccountQuery accountApp = new AccountQuery(new AccountQueryRepositoryInMemory());
+        private AccountQueryService accountApp = new AccountQueryService(new AccountQueryRepositoryInMemory());
 
         [TestMethod]
         public void AccountsThatDoNotFollowBack_ReturnsEmptyList()

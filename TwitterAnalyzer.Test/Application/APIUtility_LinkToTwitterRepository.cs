@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TwitterAnalyzer.Repository;
-using TwitterAnalyzer.Interfaces;
+using TwitterAnalyzer.Infrastructure;
+using TwitterAnalyzer.Domain;
 
 namespace TwitterAnalyzer.Test.Application
 {
     [TestClass]
     public class APIUtility_LinkToTwitterRepository
     {
-        RepositoryInformation repositoryCtx = new AccountQueryRepositoryLinqToTwitter();
+        APIRateLimitRepository repositoryCtx = new AccountQueryRepositoryLinqToTwitter();
 
         
         [TestMethod]

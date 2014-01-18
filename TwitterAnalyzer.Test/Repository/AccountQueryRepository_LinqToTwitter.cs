@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TwitterAnalyzer.Interfaces;
-using TwitterAnalyzer.Repository;
+using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Infrastructure;
 
 namespace TwitterAnalyzer.Test.Repository
 {

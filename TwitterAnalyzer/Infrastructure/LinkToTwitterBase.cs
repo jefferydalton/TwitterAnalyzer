@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 
-namespace TwitterAnalyzer.Repository
+namespace TwitterAnalyzer.Infrastructure
 {
     public abstract class LinkToTwitterBase     {
 

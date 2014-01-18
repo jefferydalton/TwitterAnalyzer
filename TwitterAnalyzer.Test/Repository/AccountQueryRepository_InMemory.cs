@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TwitterAnalyzer.Repository;
-using TwitterAnalyzer.Interfaces;
+using TwitterAnalyzer.Infrastructure;
+using TwitterAnalyzer.Domain;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;

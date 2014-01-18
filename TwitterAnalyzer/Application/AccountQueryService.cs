@@ -4,22 +4,23 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TwitterAnalyzer.Application;
+using TwitterAnalyzer.Domain.Model;
 using TwitterAnalyzer.Domain;
-using TwitterAnalyzer.Interfaces;
-using TwitterAnalyzer.Repository;
+using TwitterAnalyzer.Infrastructure;
 
-namespace TwitterAnalyzer.Domain
+namespace TwitterAnalyzer.Application
 {
-    public class AccountQuery
+    public class AccountQueryService
     {
         private AccountQueryRepository accountQueryRepository;
 
-        public AccountQuery()
+        public AccountQueryService()
         {
             this.accountQueryRepository = new AccountQueryRepositoryLinqToTwitter();
         }
 
-        public AccountQuery(AccountQueryRepository accountQueryRepository)
+        public AccountQueryService(AccountQueryRepository accountQueryRepository)
         {
             this.accountQueryRepository = accountQueryRepository;
         }
@@ -29,9 +30,9 @@ namespace TwitterAnalyzer.Domain
             return accountQueryRepository;
         }
 
-        public RepositoryInformation RepositoryInformation()
+        public APIRateLimitRepository RepositoryInformation()
         {
-            return (RepositoryInformation)accountQueryRepository;
+            return (APIRateLimitRepository)accountQueryRepository;
         }
 
         public ReadOnlyCollection<Account> GetAccountsThatDoNotFollowMeBack()
