@@ -12,7 +12,7 @@ namespace TwitterAnalyzer.Test.Application
     [TestClass]
     public class APIUtility_InMemoryRepository
     {
-        APIRateLimitRepository repositoryCtx = new AccountQueryRepositoryInMemory();
+        APIQueryServiceRepository repositoryCtx = new AccountQueryRepositoryInMemory();
 
         
         [TestMethod]

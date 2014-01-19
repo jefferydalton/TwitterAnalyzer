@@ -12,7 +12,7 @@ namespace TwitterAnalyzer.Test.Application
     [TestClass]
     public class APIUtility_LinkToTwitterRepository
     {
-        APIRateLimitRepository repositoryCtx = new AccountQueryRepositoryLinqToTwitter();
+        APIQueryServiceRepository repositoryCtx = new AccountQueryRepositoryLinqToTwitter();
 
         
         [TestMethod]

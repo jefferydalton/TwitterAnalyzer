@@ -9,7 +9,7 @@ using TwitterAnalyzer.Domain;
 
 namespace TwitterAnalyzer.Infrastructure
 {
-    public class AccountQueryRepositoryInMemory : AccountQueryRepository, APIRateLimitRepository
+    public class AccountQueryRepositoryInMemory : AccountQueryRepository, APIQueryServiceRepository
     {
         public Account GetAccount(ulong accountId)
         {

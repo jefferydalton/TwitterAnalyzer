@@ -5,7 +5,6 @@ using TwitterAnalyzer.Domain;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using TwitterAnalyzer.Application;
 
 namespace TwitterAnalyzer.Test.Application
 {

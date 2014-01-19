@@ -13,7 +13,7 @@ using TwitterAnalyzer.Domain.Model;
 
 namespace TwitterAnalyzer.Infrastructure
 {
-    public class AccountQueryRepositoryLinqToTwitter : LinkToTwitterBase, AccountQueryRepository, APIRateLimitRepository
+    public class AccountQueryRepositoryLinqToTwitter : LinkToTwitterBase, AccountQueryRepository, APIQueryServiceRepository
     {
         private MemoryCache accountCache = MemoryCache.Default;
 
