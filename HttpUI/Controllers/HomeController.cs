@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TwitterAnalyzer.Domain;
+using TwitterAnalyzer.Domain.Model;
 using TwitterAnalyzer.Application;
 
 namespace HttpUI.Controllers
