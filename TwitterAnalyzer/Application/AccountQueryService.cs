@@ -8,7 +8,7 @@ using TwitterAnalyzer.Domain.Model;
 using TwitterAnalyzer.Domain;
 using TwitterAnalyzer.Infrastructure;
 
-namespace TwitterAnalyzer.Domain
+namespace TwitterAnalyzer.Application
 {
     public class AccountQueryService
     {

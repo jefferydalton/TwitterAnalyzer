@@ -62,8 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\AccountQueryService.cs" />
-    <Compile Include="Domain\APIQueryService.cs" />
+    <Compile Include="Application\AccountQueryService.cs" />
+    <Compile Include="Application\APIQueryService.cs" />
     <Compile Include="Domain\Model\Account.cs" />
     <Compile Include="Domain\Model\APIRateLimit.cs" />
     <Compile Include="Domain\AccountQueryRepository.cs" />
@@ -79,9 +79,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Application\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
